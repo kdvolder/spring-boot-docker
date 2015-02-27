@@ -12,6 +12,9 @@ In addition to that I also added my user to the 'docker' group.
 
 This allows the user to run docker without having to type 'sudo' each time.
 
+For the rest of the steps I mostly followed as described [here](http://blog.adaofeliz.com/2014/11/21/first-look-spring-boot-and-docker/)
+with some minor variations because I was using the 'New Spring Starter' wizard in STS which does some of the pom setup for us.
+
 Step 2: create a boot app
 -------------------------
 
