@@ -58,3 +58,31 @@ Add this to the pom:
         </executions>
     </plugin>
 
+Step 4: Create docker image
+---------------------------
+
+First we need to build our stuff with maven. From the root of the project:
+
+     mvn clean install
+     
+Then we can build the image
+
+     cd target
+     docker build -t spring-boot-docker .
+     
+Step 5: Run the image
+---------------------
+
+Check that the image was create and determine its id:
+
+     docker images
+     
+This shows you a list of images find the 'spring-boot-docker' one and write down its ID to use in the
+next command:
+
+     docker run -p 8080:8080 9969adf59c45
+     
+You can now connect to http://localhost:8080/
+
+Note: unless you actually added something to your app (like a hello world page) you'll 
+get a 404 error page.
